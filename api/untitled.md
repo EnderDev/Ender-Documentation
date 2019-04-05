@@ -160,7 +160,49 @@ Tells the server which dashboard to load.
 {% endapi-method-response-example-description %}
 
 ```
+:^) This should change based on your auth token and ID.
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
+{% api-method method="get" host="https://api.ender.site" path="/bot/:guildId" %}
+{% api-method-summary %}
+Bot
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Checks if the bot is in the guild
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="guildId" type="string" required=false %}
+Which guild ID to check.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Bot is in guild
+{% endapi-method-response-example-description %}
+
+```javascript
+{"bot":1}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+Either bot has no permission to see guild, or bot is not in server.
+{% endapi-method-response-example-description %}
+
+```javascript
+{"bot":0}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
