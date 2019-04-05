@@ -6,5 +6,5 @@
 
 ## API
 
-* [🚧 API Work in Progress](api/untitled.md)
+* [👨‍💻 API](api/untitled.md)
 
